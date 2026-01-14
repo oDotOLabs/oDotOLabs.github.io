@@ -54,6 +54,22 @@
                 align-items: center;
             }
 
+            /* 中間項目添加間隙 */
+            .gallery-item:not(:first-child):not(:last-child) {
+                margin-top: 6px;
+                margin-bottom: 6px;
+            }
+
+            /* 第一個項目只有底部間隙 */
+            .gallery-item:first-child:not(:last-child) {
+                margin-bottom: 6px;
+            }
+
+            /* 最後一個項目只有頂部間隙 */
+            .gallery-item:last-child:not(:first-child) {
+                margin-top: 6px;
+            }
+
             /* 臨時色塊背景 */
             .gallery-item:nth-child(1) {
                 background-color: #e8daff;
@@ -160,7 +176,7 @@
         <div class="footer">
             <div class="footer-links">
                 <a href="/support">支持</a>
-                <span class="separator">·</span>
+                <span class="separator">|</span>
                 <a href="/privacy">隱私政策</a>
             </div>
         </div>
